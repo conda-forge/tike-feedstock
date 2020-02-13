@@ -10,7 +10,7 @@ source:
   sha256: 89aafa54a04d1ca58ab121958bdcbd01cfd521ecfd70312fbe174a909009faa3
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: true  # [py<35 or (not unix)]
 
@@ -21,7 +21,7 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - numpy
-    - matplotlib
+    - matplotlib-base
     - mpi4py
     - python
     - scipy
