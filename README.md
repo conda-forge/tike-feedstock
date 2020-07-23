@@ -5,7 +5,7 @@ Home: https://github.com/tomography/tike
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Tike is a toolbox for tomographic reconstruction of 3D objects from
 ptychography data.
