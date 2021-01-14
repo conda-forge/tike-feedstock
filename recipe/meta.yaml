@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
     - setuptools_scm_git_archive
   run:
     - cupy >=7
@@ -25,7 +25,7 @@ requirements:
     - numpy >=1.17
     - matplotlib-base
     - mpi4py
-    - python
+    - python >=3.6
     - py-opencv
     - scipy
     - setuptools
