@@ -12,21 +12,23 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<35 or (not unix)]
+  skip: true  # [py<36 or (not unix)]
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools_scm_git_archive
   run:
-    - numpy
+    - cupy>=7
+    - importlib_resources
+    - numpy >=1.17
     - matplotlib-base
     - mpi4py
     - python
+    - py-opencv
     - scipy
     - setuptools
-    - tomopy
 
 test:
   imports:
