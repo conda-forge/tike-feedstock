@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.7.2" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/tomography/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3059876a7bdcb4134ad1433a38cfcf67b147a1a2895d0fbc7ccb1fa73466261c
+  sha256: c0a5de7782b5b4e0588d3faa20a253d178383b4630073e13c63c31519fbddc77
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: true  # [py<35 or (not unix)]
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -20,13 +20,15 @@ requirements:
     - python
     - setuptools_scm_git_archive
   run:
-    - numpy
+    - cupy >=7
+    - importlib_resources
+    - numpy >=1.17
     - matplotlib-base
     - mpi4py
-    - python
+    - python >=3.6
+    - py-opencv
     - scipy
     - setuptools
-    - tomopy
 
 test:
   imports:
