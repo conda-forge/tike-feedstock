@@ -13,12 +13,11 @@ build:
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<36 or (not unix)]
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools_scm_git_archive
   run:
     - cupy >=7
