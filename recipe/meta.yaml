@@ -33,9 +33,6 @@ requirements:
 test:
   imports:
     - tike
-    - tike.ptycho
-#     - tike.tomo
-    - tike.view
     - tike.scan
     - tike.trajectory
 
