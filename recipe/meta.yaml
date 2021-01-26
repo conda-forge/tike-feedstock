@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tomography/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: c0a5de7782b5b4e0588d3faa20a253d178383b4630073e13c63c31519fbddc77
+  sha256: ec36027d8b117be27b5da12b111a1febea8f849932b9b706b9ccad55269a0560
 
 build:
   noarch: python
