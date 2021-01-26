@@ -30,15 +30,6 @@ requirements:
     - scipy
     - setuptools
 
-test:
-  imports:
-    - tike
-    - tike.ptycho
-#     - tike.tomo
-    - tike.view
-    - tike.scan
-    - tike.trajectory
-
 about:
   home: https://github.com/tomography/tike
   license: BSD-3-Clause
