@@ -34,7 +34,9 @@ requirements:
 
 test:
   requires:
+    # CuPy requires libcuda.so to available at import
     - {{ compiler('cuda') }}
+    - cudatoolkit ={{ cuda_compiler_version }}
   imports:
     - tike
     - tike.align
