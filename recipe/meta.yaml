@@ -13,6 +13,7 @@ build:
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  skip: True  # [cuda_compiler_version == "None"]
 
 requirements:
   host:
@@ -32,6 +33,8 @@ requirements:
     - setuptools >=45
 
 test:
+  requires:
+    - {{ compiler('cuda') }}
   imports:
     - tike
     - tike.align
