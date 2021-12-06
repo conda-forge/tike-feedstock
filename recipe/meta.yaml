@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tomography/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3b3188634c2817126ae6ac687909b23e494c3e93740dc13073ea071ac38e541e
+  sha256: c3351978ae504853e2f9465ef9a2eb66ad44b5ef5d457e81934e47dce03713ab
 
 build:
   noarch: python
