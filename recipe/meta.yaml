@@ -33,19 +33,16 @@ requirements:
     - setuptools >=45
 
 test:
-  requires:
-    # CuPy requires libcuda.so to available at import
-    - {{ compiler('cuda') }}
-    - cudatoolkit ={{ cuda_compiler_version }}
   imports:
+  # Cannot import any module that contains CuPy
     - tike
-    - tike.align
-    - tike.communicators
-    - tike.lamino
-    - tike.ptycho
+#     - tike.align
+#     - tike.communicators
+#     - tike.lamino
+#     - tike.ptycho
     - tike.linalg
     - tike.opt
-    - tike.random
+#     - tike.random
     - tike.scan
     - tike.trajectory
     - tike.view
