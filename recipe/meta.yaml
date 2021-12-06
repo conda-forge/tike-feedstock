@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.18.0" %}
+{% set version = "0.19.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tomography/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b4435b8e2b863b0cf1f6608280984708c27264f233a6648a1b11a1fa25265eb1
+  sha256: c3351978ae504853e2f9465ef9a2eb66ad44b5ef5d457e81934e47dce03713ab
 
 build:
   noarch: python
@@ -20,21 +20,31 @@ requirements:
     - python
     - setuptools_scm_git_archive
   run:
-    - cupy >=7
-    - importlib_resources
+    - cupy >=8
+    - importlib_metadata # backport for python<3.8
+    - importlib_resources # backport for python<3.9
     - numpy >=1.17
     - matplotlib-base
-    - mpi4py
+    - mpi4py >=3
     - python >=3.6
     - py-opencv
     - scipy
-    - setuptools
+    - setuptools >=45
 
 test:
   imports:
+  # Cannot import any module that contains CuPy
     - tike
+#     - tike.align
+#     - tike.communicators
+#     - tike.lamino
+#     - tike.ptycho
+    - tike.linalg
+    - tike.opt
+#     - tike.random
     - tike.scan
     - tike.trajectory
+    - tike.view
 
 about:
   home: https://github.com/tomography/tike
