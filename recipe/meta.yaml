@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.20.1" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}
