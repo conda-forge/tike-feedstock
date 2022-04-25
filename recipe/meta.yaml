@@ -1,13 +1,13 @@
 {% set name = "tike" %}
-{% set version = "0.20.1" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/tomography/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 45b941be83c16f82edf5089e11065029753de60dcc96717178913f9d8e33e93c
+  url: https://github.com/AdvancedPhotonSource/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 585f221adc9c4607350d54212078fd43323fc8fac64a56421e5eff652e486202
 
 build:
   noarch: python
@@ -47,7 +47,7 @@ test:
     - tike.view
 
 about:
-  home: https://github.com/tomography/tike
+  home: https://github.com/AdvancedPhotonSource/tike
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -59,7 +59,7 @@ about:
     variety of reconstruction algorithms, and to provide a common platform for
     the synchrotron research community.
   doc_url: https://tike.readthedocs.io/
-  dev_url: https://github.com/tomography/tike
+  dev_url: https://github.com/AdvancedPhotonSource/tike
 
 extra:
   recipe-maintainers:
