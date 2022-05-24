@@ -35,6 +35,8 @@ requirements:
 test:
   requires:
     - pip
+  commands:
+   - pip check
   imports:
   # Cannot import any module that contains CuPy
     - tike
@@ -48,9 +50,7 @@ test:
     - tike.scan
     - tike.trajectory
     - tike.view
-   commands:
-     - pip check
- 
+
 about:
   home: https://github.com/AdvancedPhotonSource/tike
   license: BSD-3-Clause
