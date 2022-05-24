@@ -17,21 +17,24 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
+    - setuptools >=45
+    - setuptools_scm >=6.2
     - setuptools_scm_git_archive
   run:
-    - cupy >=8
+    - cupy >=8,!=10.3.0
     - importlib_metadata # backport for python<3.8
     - importlib_resources # backport for python<3.9
-    - numpy >=1.17
-    - matplotlib-base
-    - mpi4py >=3
+    - matplotlib-base =3.*
+    - mpi4py =3.*
+    - numpy >=1.17,<2
     - python >=3.6
-    - py-opencv
-    - scipy
-    - setuptools >=45
+    - py-opencv >=3.4,<5
+    - scipy =1.*
 
 test:
+  requires:
+  - pip
   imports:
   # Cannot import any module that contains CuPy
     - tike
@@ -45,7 +48,9 @@ test:
     - tike.scan
     - tike.trajectory
     - tike.view
-
+   commands:
+     - pip check
+ 
 about:
   home: https://github.com/AdvancedPhotonSource/tike
   license: BSD-3-Clause
