@@ -34,7 +34,7 @@ requirements:
 
 test:
   requires:
-  - pip
+    - pip
   imports:
   # Cannot import any module that contains CuPy
     - tike
