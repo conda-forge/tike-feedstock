@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e4f3e5b04e836ade0d1bd2f40c27403f3a499471d8cff4d40e29b75515ac80c6
+  sha256: 8256160744a9956de36b1f2248c4136bdd68e7dc6c12ba442346ebc6f06f6b5c
 
 build:
   noarch: python
