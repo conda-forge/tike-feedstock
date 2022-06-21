@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.22.1" %}
+{% set version = "0.22.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 8256160744a9956de36b1f2248c4136bdd68e7dc6c12ba442346ebc6f06f6b5c
+  sha256: 61a5ae67bd06cdeaada013002c86c7adfd2df7dedbaf715784ae21fbb6d91ed4
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ test:
   requires:
     - pip
   commands:
-   - pip check
+    - pip check
   imports:
   # Cannot import any module that contains CuPy
     - tike
