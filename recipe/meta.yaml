@@ -19,18 +19,20 @@ requirements:
     - pip
     - python >=3.6
     - setuptools >=45
-    - setuptools_scm >=6.2
-    - setuptools_scm_git_archive
+    - setuptools_scm >=7
+    - toml
+    - wheel
   run:
     - cupy >=8,!=10.3.0
     - importlib_metadata # backport for python<3.8
     - importlib_resources # backport for python<3.9
     - matplotlib-base =3.*
-    - mpi4py =3.*
     - numpy >=1.17,<2
     - python >=3.6
     - py-opencv >=3.4,<5
-    - scipy =1.*
+    - scipy >=1.6,<2
+  run_contrained:
+    - mpi4py =3.*
 
 test:
   requires:
