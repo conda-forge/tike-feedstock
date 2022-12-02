@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.23.4" %}
+{% set version = "0.23.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 49f9312dd0db0d62ac70421d76031b7955f07f59bf4985ea43d0923bbdd5bc84
+  sha256: bf45bdb0b79835f8b3bd28753947d6f90a9bf3e91ec77a1cbbf197dfc623298c
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools >=45
+    - setuptools >=61
     - setuptools_scm >=7
     - toml
     - wheel
