@@ -1,11 +1,11 @@
-About tike
-==========
+About tike-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tike-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/AdvancedPhotonSource/tike
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tike-feedstock/blob/main/LICENSE.txt)
 
 Summary: Tike is a toolbox for tomographic reconstruction of 3D objects from
 ptychography data.
