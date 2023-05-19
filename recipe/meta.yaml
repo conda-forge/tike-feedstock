@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/AdvancedPhotonSource/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6702569d9826f902895fcec18d4e151c1bd2498029d2988ee8526d5cf2e2e0be
+  url: https://github.com/AdvancedPhotonSource/tike/releases/download/v{{ version }}/tike-v{{ version }}.zip
+  sha256: d592e46c346ff6b552eec3351385ca6eb739d0c79f2d227f18336c8b4f7349bf
 
 build:
   noarch: python
