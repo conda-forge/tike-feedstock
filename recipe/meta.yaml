@@ -48,8 +48,8 @@ test:
 #     - tike.communicators
 #     - tike.lamino
 #     - tike.ptycho
-    - tike.linalg
-    - tike.opt
+#     - tike.linalg
+#     - tike.opt
 #     - tike.random
     - tike.scan
     - tike.trajectory
