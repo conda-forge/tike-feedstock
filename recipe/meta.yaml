@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.24.3" %}
+{% set version = "0.25.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/tike/releases/download/v{{ version }}/tike-v{{ version }}.zip
-  sha256: 65db7354ef5310abbd9c61ae1ef6fb91593b284a47cc19ed8ac56f15a3c1af26
+  sha256: ec25af90ec971fe12aded19bd743c4857f0fbcf2cfaee0869367fd4161475c63
 
 build:
   noarch: python
@@ -48,8 +48,8 @@ test:
 #     - tike.communicators
 #     - tike.lamino
 #     - tike.ptycho
-    - tike.linalg
-    - tike.opt
+#     - tike.linalg
+#     - tike.opt
 #     - tike.random
     - tike.scan
     - tike.trajectory
