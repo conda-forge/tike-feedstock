@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.25.2" %}
+{% set version = "0.25.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/tike/releases/download/v{{ version }}/tike-v{{ version }}.zip
-  sha256: 986dafd3ddadd9e04dbd86bc4976d19eae29d05ca44882a70ef1d48b0720d61c
+  sha256: 8471a4a7691dfe7ec91d2ab231b7b02d5feb67ea21a01d2d304aea1d0bf83e63
 
 build:
   noarch: python
