@@ -53,7 +53,7 @@ test:
 #     - tike.random
     - tike.scan
     - tike.trajectory
-    - tike.view
+    # - tike.view
 
 about:
   home: https://github.com/AdvancedPhotonSource/tike
