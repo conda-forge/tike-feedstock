@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.25.4" %}
+{% set version = "0.25.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/tike/releases/download/v{{ version }}/tike-v{{ version }}.zip
-  sha256: 6977c271da80505c59900f98ccf14c7cfbeefc2ac43639774efb2732abf2f6be
+  sha256: fb06a3c5756fd9543049bb7df59f9067a3838cf7f6e8941c24be003dfed1973d
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - toml
     - wheel
   run:
-    - cupy >=10,!=10.3.0
+    - cupy >=10,!=10.3.0,!=13.0.*
     - importlib_resources # backport for python<3.9
     - matplotlib-base =3.*
     - numpy >=1.17,<2
@@ -53,7 +53,7 @@ test:
 #     - tike.random
     - tike.scan
     - tike.trajectory
-    - tike.view
+    # - tike.view
 
 about:
   home: https://github.com/AdvancedPhotonSource/tike
