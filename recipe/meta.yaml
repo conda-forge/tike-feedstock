@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   # SCM doesn't handle v-prefix version information
   script_env:
@@ -26,18 +26,13 @@ requirements:
     - toml
     - wheel
   run:
-    - click
-    - h5py
-    - mpi4py
-    - opencv >=3.4,<5.0
-    - pyinstrument
     - cupy >=10.0,!=10.3.0,!=13.0.*
     - importlib_resources # backport for python<3.9
     - matplotlib-base ==3.*
     - numpy >=1.17,<2.dev0
     - python >=3.8
     - py-opencv >=3.4,<5
-    - scipy >=1.6.0
+    - scipy >=1.6,<2.dev0
   run_constrained:
     - mpi4py =3.*
 
