@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.25.7" %}
+{% set version = "0.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/tike/releases/download/v{{ version }}/tike-v{{ version }}.zip
-  sha256: 1ade0eec2d854f455119ad8306647fc0b2c798f0b6e4d44c15d85021a0ffd097
+  sha256: a4e14c8cd5c0737fc87309b8e611e4c707bff40d3bce0d9c2364dac0df703cdd
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   # SCM doesn't handle v-prefix version information
   script_env:
