@@ -42,7 +42,7 @@ test:
   commands:
     - pip check
   imports:
-  # Cannot import any module that contains CuPy
+  # Cannot import any module that contains openGL
     - tike
     # - tike.align
     - tike.communicators
@@ -53,7 +53,7 @@ test:
     - tike.random
     - tike.scan
     - tike.trajectory
-    - tike.view
+    # - tike.view
 
 about:
   home: https://github.com/AdvancedPhotonSource/tike
