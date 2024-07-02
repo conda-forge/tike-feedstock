@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.26.0" %}
+{% set version = "0.25.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/tike/releases/download/v{{ version }}/tike-v{{ version }}.zip
-  sha256: a4e14c8cd5c0737fc87309b8e611e4c707bff40d3bce0d9c2364dac0df703cdd
+  sha256: fecce2fc9a4748ff33cedb32ae2c7fecbfc702651ad8c0cab907df74dcd3fff1
 
 build:
   noarch: python
@@ -42,18 +42,17 @@ test:
   commands:
     - pip check
   imports:
-  # Cannot import any module that contains CuPy
     - tike
-#     - tike.align
-#     - tike.communicators
-#     - tike.lamino
-#     - tike.ptycho
-#     - tike.linalg
-#     - tike.opt
-#     - tike.random
+    - tike.align
+    - tike.communicators
+    - tike.lamino
+    - tike.ptycho
+    - tike.linalg
+    - tike.opt
+    - tike.random
     - tike.scan
     - tike.trajectory
-    # - tike.view
+    - tike.view
 
 about:
   home: https://github.com/AdvancedPhotonSource/tike
