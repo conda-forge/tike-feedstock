@@ -42,8 +42,9 @@ test:
   commands:
     - pip check
   imports:
+  # Cannot import any module that contains CuPy
     - tike
-    - tike.align
+    # - tike.align
     - tike.communicators
     - tike.lamino
     - tike.ptycho
