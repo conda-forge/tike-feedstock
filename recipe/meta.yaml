@@ -1,5 +1,5 @@
 {% set name = "tike" %}
-{% set version = "0.25.8" %}
+{% set version = "0.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/AdvancedPhotonSource/tike/releases/download/v{{ version }}/tike-v{{ version }}.zip
-  sha256: fecce2fc9a4748ff33cedb32ae2c7fecbfc702651ad8c0cab907df74dcd3fff1
+  sha256: a4e14c8cd5c0737fc87309b8e611e4c707bff40d3bce0d9c2364dac0df703cdd
 
 build:
   noarch: python
@@ -26,13 +26,14 @@ requirements:
     - toml
     - wheel
   run:
+    - opencv >=3.4,<5.0
     - cupy >=10.0,!=10.3.0,!=13.0.*
     - importlib_resources # backport for python<3.9
     - matplotlib-base ==3.*
     - numpy >=1.17,<2.dev0
     - python >=3.8
     - py-opencv >=3.4,<5
-    - scipy >=1.6,<2.dev0
+    - scipy >=1.6.0
   run_constrained:
     - mpi4py =3.*
 
