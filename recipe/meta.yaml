@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   # SCM doesn't handle v-prefix version information
   script_env:
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=61
     - setuptools_scm >=7
     - toml
@@ -31,7 +31,7 @@ requirements:
     - importlib_resources # backport for python<3.9
     - matplotlib-base ==3.*
     - numpy >=1.17,<2.dev0
-    - python >=3.8
+    - python >={{ python_min }}
     - py-opencv >=3.4,<5
     - scipy >=1.6.0
   run_constrained:
@@ -40,6 +40,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
